@@ -1,7 +1,22 @@
-document.getElementById('searchInput').addEventListener('input', function () {
-    var filter = normalize(this.value);
+var searchInput = document.getElementById("searchBox");
+searchInput.value = "";
+var query = new URLSearchParams(window.location.search);
+
+if (query.has("q")) {
+    searchInput.value = query.get("q");
+    input();
+}
+const inputBox = document.getElementById('searchInput');
+inputBox.addEventListener('input', input);
+
+
+function input() {
+    var url = new URL(window.location.href);
+    url.searchParams.set("q", searchInput.value);
+    window.history.pushState({}, '', url);
+
+    var filter = normalize(inputBox.value);
     var items = document.querySelectorAll('.romList li');
-    console.log(items)
     var validDeterminers = [];
     Array.from(items).forEach(function (item) {
         if (item.classList.contains('determiner')) return;
@@ -23,8 +38,7 @@ document.getElementById('searchInput').addEventListener('input', function () {
             }
         }
     });
-});
-
+}
 function normalize(string) {
     string = string.toLowerCase();
     string = string.replace(/[^a-z0-9]/g, "");
