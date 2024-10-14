@@ -6,7 +6,7 @@ if (query.has("q")) {
     searchInput.value = query.get("q");
     input();
 }
-inputBox.addEventListener('input', input);
+searchInput.addEventListener('input', input);
 
 
 function input() {
@@ -14,7 +14,7 @@ function input() {
     url.searchParams.set("q", searchInput.value);
     window.history.pushState({}, '', url);
 
-    var filter = normalize(inputBox.value);
+    var filter = normalize(searchInput.value);
     var items = document.querySelectorAll('.romList li');
     var validDeterminers = [];
     Array.from(items).forEach(function (item) {
