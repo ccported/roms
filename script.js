@@ -1,4 +1,4 @@
-var searchInput = document.getElementById("searchBox");
+var searchInput = document.getElementById("searchInput");
 searchInput.value = "";
 var query = new URLSearchParams(window.location.search);
 
@@ -6,7 +6,6 @@ if (query.has("q")) {
     searchInput.value = query.get("q");
     input();
 }
-const inputBox = document.getElementById('searchInput');
 inputBox.addEventListener('input', input);
 
 
