@@ -1,4 +1,5 @@
-# roms
+# Rom Library
+`CTRL+F` to search.
 
 GBA Roms
 - Pokemon
