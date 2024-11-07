@@ -26,6 +26,7 @@
         ["super_mario_bros.nes.zip","Super Mario Bros"],
         ["terminator_2_judgement_day.nes.zip","Terminator 2 Judgement Day"],
         ["tetris_2.nes.zip","Tetris 2"],
-        ["zelda_2.nes.zip","Zelda 2"]
+        ["zelda_2.nes.zip","Zelda 2"],
+        ["galaga.nes","Galaga"]
     ]
 }
