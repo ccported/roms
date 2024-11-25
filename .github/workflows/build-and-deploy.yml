@@ -18,7 +18,7 @@ jobs:
         node-version: '20'
     
     - name: Install dependencies
-      run: npm install
+      run: npm ci
     
     - name: Run build script
       env:
@@ -30,10 +30,10 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
+        git config user.name "CI Build roms.json"
+        git config user.email sojscoder@gmail.com
         git add roms.json
-        git commit -m "Update roms.json [skip ci]" || echo "No changes to commit"
+        git commit -m "Update roms.json [skip ci]"
         git push
     
     - name: Deploy to GitHub Pages
