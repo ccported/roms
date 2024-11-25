@@ -70,7 +70,7 @@
                              <div class="name">${title}</div>
                              <div class="links">
                                  <a href="https://ccportedroms.s3-us-west-2.amazonaws.com/${console}/${filename}" target="_blank">Download</a>
-                                 <a href="/emulator/?core=${console}&rom=https://ccportedroms.s3-us-west-2.amazonaws.com/${console}/${filename}" target="_blank">Play</a>
+                                 <a href="/emulator/?core=${console}&rom=${filename}" target="_blank">Play</a>
                              </div>
                          </li>
                      `).join('')}
