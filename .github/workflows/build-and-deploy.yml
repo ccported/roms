@@ -44,6 +44,6 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: .
-        publish_branch: gh-pages,
-        exclude_assets: '.github,package.json,static.js,build.js,rename.js,README.md',
+        publish_branch: gh-pages
+        exclude_assets: '.github,package.json,static.js,build.js,rename.js,README.md'
         force_orphan: true
