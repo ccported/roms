@@ -36,7 +36,7 @@ jobs:
         git config user.name "CI Build roms.json"
         git config user.email sojscoder@gmail.com
         git add roms.json
-        git commit -m "Update roms.json [skip ci]"
+        git commit -m "Update roms.json [skip ci]" || exit 0
         git push
     
     - name: Deploy to GitHub Pages
