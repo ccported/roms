@@ -2,7 +2,7 @@ name: Weekly ROM Update
 
 on:
   schedule:
-    - cron: '59 23 * * 7'  # 11:59 PM every Sunday
+    - cron: '59 23 * * 0'  # 11:59 PM every Sunday
 
 permissions:
   contents: write
